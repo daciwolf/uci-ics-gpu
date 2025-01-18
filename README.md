@@ -49,9 +49,9 @@ We will use an SBATCH script to submit the job. Keep in mind:
 
 To submit the job, use the following command:  
 ```bash
-sbatch -p opengpu.p testcode.py
+sbatch -p opengpu.p slurmscript.sh
 ```  
-Replace `testcode.py` with the name of your SLURM script or Python file.  
+Replace `slurmscript.sh` with the name of your SLURM script or Python file.  
 
 ---
 

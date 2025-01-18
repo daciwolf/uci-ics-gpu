@@ -38,3 +38,23 @@ Run the following 2 commands:
 2. " module initadd slurm "
 
 
+
+# Step 4. 
+
+Running the slurm job. We do this by using an Sbatch script. It is important to note that 
+while the form may be the same as a shell script the "comments" are not actually comments 
+and are used to configure the nodes assigned by the slurm instance 
+
+More information can be found here: https://wiki.ics.uci.edu/doku.php/services:slurm#single_core_single_gpu_job
+
+
+we want to launch the task so we will use: sbatch -p opengpu.p testcode.py
+
+
+# Step 5. 
+
+In order to see the output from the server we need to check the files that have been loaded
+into our directory via the slurmscript 
+
+To see output run: "tail -n +1 -f myoutput.out"
+To see errors run: "tail -n +1 -f myerrors.out"

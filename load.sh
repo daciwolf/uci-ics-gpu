@@ -6,14 +6,14 @@ set -e
 # Create a virtual environment (if not already created)
 if [ ! -d "env" ]; then
   echo "Creating virtual environment..."
-  python3 -m venv env
+  python3 -m venv .venv
 else
   echo "Virtual environment already exists."
 fi
 
 # Activate the virtual environment
 echo "Activating virtual environment..."
-source env/bin/activate
+source .venv/bin/activate
 
 # Install dependencies from requirements.txt
 echo "Installing dependencies..."

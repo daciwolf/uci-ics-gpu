@@ -17,21 +17,7 @@
 
 ---
 
-## Step 2: Set Up the Environment  
-1. Clone this repository or create your project. For this tutorial, we will use the Python file included in this repository.  
-2. Load the Python environment:  
-   a. Make the load script executable:  
-   ```bash
-   chmod +x load.sh
-   ```  
-   b. Run the load script:  
-   ```bash
-   ./load.sh
-   ```  
-
----
-
-## Step 3: Submit a Job to UCI SLURM Servers with GPUs  
+## Step 2: Submit a Job to UCI SLURM Servers with GPUs  
 1. Check out the available SLURM servers here:  
    [UCI SLURM Wiki](https://wiki.ics.uci.edu/doku.php/services:slurm#running_a_shell_on_a_slurm_only_cluster)  
 2. Load SLURM onto your Openlab instance by running the following commands:  
@@ -40,6 +26,16 @@
    module initadd slurm
    ```  
 
+---
+## Step 3: Set Up the Environment  
+1. Clone this repository or create your project. For this tutorial, we will use the Python file included in this repository.  
+2. Load the Python environment:  
+To submit the enviorment load script, use the following command:  
+```bash
+sbatch -p opengpu.p load.sh
+``` 
+Running this on the opengpu server will ensure that we correctly load all binary
+Output of this command will be located in a file called "slurm-{jobnumber}.out" where the job number is of the job you just loaded
 ---
 
 ## Step 4: Running the SLURM Job  
